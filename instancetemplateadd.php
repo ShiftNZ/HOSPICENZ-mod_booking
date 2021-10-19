@@ -73,8 +73,8 @@ else if ($data = $mform->get_data()) {
         $DB->insert_record("booking_instancetemplate", $newtemplate);
         redirect($urlredirect, get_string('instancesuccessfullysaved', 'booking'), 5);
     }
-    // if the user does not match the requirements he will be redirected to view.php
-    // ... with the corresponding message
+    // If the user does not match the requirements he will be redirected to view.php
+    // ... with the corresponding message.
     else {
         redirect($urlredirect, get_string('instance_not_saved_no_valid_license', 'booking'), 1, notification::NOTIFY_ERROR);
     }
