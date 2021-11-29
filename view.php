@@ -345,14 +345,6 @@ if (!$current and $bookingopen and has_capability('mod/booking:choose', $context
             echo html_writer::end_tag('div');
         }
 
-        if (!empty($booking->settings->organizatorname)) {
-            echo html_writer::start_tag('div');
-            echo html_writer::tag('label', get_string('organizatorname', 'booking') . ': ',
-                    array('class' => 'bold'));
-            echo html_writer::tag('span', $booking->settings->organizatorname);
-            echo html_writer::end_tag('div');
-        }
-
         $out = array();
         $fs = get_file_storage();
         $files = $fs->get_area_files($context->id, 'mod_booking', 'myfilemanager',
